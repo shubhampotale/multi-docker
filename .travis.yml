@@ -10,6 +10,7 @@ before_install:
 script:
   - docker run -e CI=true shubhamdockerpractice/react-test npm test
 
+
 after_success:
   - docker build -t shubhamdockerpractice/multi-client ./client
   - docker build -t shubhamdockerpractice/multi-nginx ./nginx
